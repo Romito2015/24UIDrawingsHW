@@ -80,6 +80,13 @@
                                             <action selector="colorSynthesisAction:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="NPL-x0-UJf"/>
                                         </connections>
                                     </slider>
+                                    <slider appearanceType="aqua" opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" id="Lzj-oP-ufI" userLabel="colorOpacitySlider">
+                                        <rect key="frame" x="16" y="333" width="184" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="colorSynthesisAction:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="kJT-JC-5h0"/>
+                                        </connections>
+                                    </slider>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -98,6 +105,7 @@
                         <outlet property="canvas" destination="8SH-GR-3HD" id="MkQ-gj-bKj"/>
                         <outlet property="drawingView" destination="8bC-Xf-vdC" id="Fdq-QJ-U9D"/>
                         <outlet property="firstColorOutlet" destination="8IC-ze-Uvv" id="d6U-PI-cNy"/>
+                        <outlet property="opacityOutlet" destination="Lzj-oP-ufI" id="cTY-km-uNh"/>
                         <outlet property="secondColorOutlet" destination="MBo-fP-LBu" id="wZP-hI-OAS"/>
                         <outlet property="thirdColorOutlet" destination="32r-IW-yYB" id="8se-2B-1Td"/>
                         <outlet property="tiltedView" destination="Za2-nQ-rHD" id="WN0-Yj-Vxb"/>

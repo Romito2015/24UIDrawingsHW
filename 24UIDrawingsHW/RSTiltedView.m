@@ -28,9 +28,6 @@
     
     self.layer.anchorPoint = CGPointMake(0, 1);
     self.center = CGPointMake(768, 1024);
-    
-    
-    
 }
 
 

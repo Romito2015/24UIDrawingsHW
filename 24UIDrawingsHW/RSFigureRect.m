@@ -24,8 +24,10 @@
     return self;
 }
 
-+ (void) drawFigureAtPoint:(CGPoint)point withObject:(RSFigureRect *)brush inContextOfImage:(UIImageView *)canvas {
-    
++ (void) drawFigureAtPoint:(CGPoint)point
+                withObject:(RSFigureRect *)brush
+          inContextOfImage:(UIImageView *)canvas {
+  
     UIGraphicsBeginImageContext(canvas.frame.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     [canvas.image drawInRect:CGRectMake(0, 0, canvas.frame.size.width, canvas.frame.size.height)];
@@ -57,7 +59,9 @@
     
 }
 
-- (void) createStarPointsInContext:(CGContextRef)context withCenter:(CGPoint)center forBrushObject:(RSFigureRect *)brush{
+- (void) createStarPointsInContext:(CGContextRef)context
+                        withCenter:(CGPoint)center
+                    forBrushObject:(RSFigureRect *)brush{
     
     self.allStarPoints   = [NSMutableArray array];
     self.outerStarPoints = [NSMutableArray array];
@@ -101,7 +105,6 @@
         
         [brush connectPoints:brush.allStarPoints inContext:context];
     }
-    
 }
 
 - (void) connectPoints:(NSMutableArray *)points inContext:(CGContextRef)context {

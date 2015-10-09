@@ -20,23 +20,22 @@ typedef enum {
 
 @property (assign, nonatomic) RSFigureType figureType;
 @property (assign, nonatomic) CGFloat figureRadius;
-@property (assign, nonatomic) UIColor *figureColor;
+@property (strong, nonatomic) UIColor *figureColor;
 @property (assign, nonatomic) CGContextRef context;
 @property (assign, nonatomic) CGRect mainRect;
 @property (assign, nonatomic) NSInteger numberOfAngles;
-
 
 
 @property (strong, nonatomic) NSMutableArray *allStarPoints;
 @property (strong, nonatomic) NSMutableArray *outerStarPoints;
 @property (strong, nonatomic) NSMutableArray *innerStarPoints;
 
-+ (void) drawFigureAtPoint:(CGPoint)point withObject:(RSFigureRect *)brush inContextOfImage:(UIImageView *)canvas;
++ (void) drawFigureAtPoint:(CGPoint)point
+                withObject:(RSFigureRect *)brush
+          inContextOfImage:(UIImageView *)canvas;
 
-- (void) createStarPointsInContext:(CGContextRef)context withCenter:(CGPoint)center forBrushObject:(RSFigureRect *)brush;
-
-
-
-
+- (void) createStarPointsInContext:(CGContextRef)context
+                        withCenter:(CGPoint)center
+                    forBrushObject:(RSFigureRect *)brush;
 
 @end
