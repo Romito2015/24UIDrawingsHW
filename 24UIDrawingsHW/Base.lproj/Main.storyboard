@@ -1,22 +1,107 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A389" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RSViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="RSDrawingView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="8SH-GR-3HD" userLabel="canvas">
+                                <rect key="frame" x="0.0" y="20" width="768" height="948"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <accessibility key="accessibilityConfiguration" hint="" label=""/>
+                            </imageView>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vui-fA-5eO">
+                                <rect key="frame" x="370" y="981" width="125" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Brush properties">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="brushPropertiesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zsa-cm-Nbw"/>
+                                </connections>
+                            </button>
+                            <view appearanceType="aqua" contentMode="scaleToFill" id="Za2-nQ-rHD" customClass="RSTiltedView">
+                                <rect key="frame" x="266" y="30" width="400" height="948"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <segmentedControl appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="2Hx-62-1cc">
+                                        <rect key="frame" x="10" y="8" width="259" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="Circle"/>
+                                            <segment title="Rectangle"/>
+                                            <segment title="Polygon"/>
+                                            <segment title="Star"/>
+                                        </segments>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="brushShapePicker:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ypt-Q3-HBl"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="heb-In-iBU" userLabel="brushPreview">
+                                        <rect key="frame" x="10" y="44" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <slider appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="65" minValue="30" maxValue="100" id="aA7-D8-fkd" userLabel="brushSizePicker">
+                                        <rect key="frame" x="15" y="180" width="118" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="minimumTrackTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="maximumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="thumbTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="brushSizePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="biI-DM-oe2"/>
+                                        </connections>
+                                    </slider>
+                                    <slider appearanceType="aqua" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" id="8IC-ze-Uvv" userLabel="colorOneSlider">
+                                        <rect key="frame" x="15" y="218" width="184" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="colorSynthesisAction:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="kos-MB-bLO"/>
+                                        </connections>
+                                    </slider>
+                                    <slider appearanceType="aqua" opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" id="MBo-fP-LBu" userLabel="colorTwoSlider">
+                                        <rect key="frame" x="15" y="256" width="184" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="colorSynthesisAction:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="tjI-bT-ite"/>
+                                        </connections>
+                                    </slider>
+                                    <slider appearanceType="aqua" opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" id="32r-IW-yYB" userLabel="colorThreeSlider">
+                                        <rect key="frame" x="15" y="294" width="184" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="colorSynthesisAction:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="NPL-x0-UJf"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose brush shape" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D9t-eL-1Ix">
+                                <rect key="frame" x="5" y="985" width="159" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="brushPreviewCanvas" destination="heb-In-iBU" id="DEQ-Gu-K7i"/>
+                        <outlet property="brushTypeSelectorOutlet" destination="2Hx-62-1cc" id="d8S-az-waU"/>
+                        <outlet property="canvas" destination="8SH-GR-3HD" id="MkQ-gj-bKj"/>
+                        <outlet property="drawingView" destination="8bC-Xf-vdC" id="Fdq-QJ-U9D"/>
+                        <outlet property="firstColorOutlet" destination="8IC-ze-Uvv" id="d6U-PI-cNy"/>
+                        <outlet property="secondColorOutlet" destination="MBo-fP-LBu" id="wZP-hI-OAS"/>
+                        <outlet property="thirdColorOutlet" destination="32r-IW-yYB" id="8se-2B-1Td"/>
+                        <outlet property="tiltedView" destination="Za2-nQ-rHD" id="WN0-Yj-Vxb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

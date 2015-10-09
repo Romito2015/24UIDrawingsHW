@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B309611D1BC44B060027A2DE /* RSFigureRect.m in Sources */ = {isa = PBXBuildFile; fileRef = B309611C1BC44B060027A2DE /* RSFigureRect.m */; };
+		B32C13501BC3F4640033B230 /* RSTiltedView.m in Sources */ = {isa = PBXBuildFile; fileRef = B32C134F1BC3F4640033B230 /* RSTiltedView.m */; };
 		B3D23ABF1BBA8A2400166CCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D23ABE1BBA8A2400166CCF /* Foundation.framework */; };
 		B3D23AC11BBA8A2400166CCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D23AC01BBA8A2400166CCF /* CoreGraphics.framework */; };
 		B3D23AC31BBA8A2400166CCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D23AC21BBA8A2400166CCF /* UIKit.framework */; };
@@ -21,6 +23,7 @@
 		B3D23AE01BBA8A2400166CCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D23AC21BBA8A2400166CCF /* UIKit.framework */; };
 		B3D23AE81BBA8A2400166CCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3D23AE61BBA8A2400166CCF /* InfoPlist.strings */; };
 		B3D23AEA1BBA8A2400166CCF /* _4UIDrawingsHWTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D23AE91BBA8A2400166CCF /* _4UIDrawingsHWTests.m */; };
+		B3D23AF51BBA8D4B00166CCF /* RSDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D23AF41BBA8D4B00166CCF /* RSDrawingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B309611B1BC44B060027A2DE /* RSFigureRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSFigureRect.h; sourceTree = "<group>"; };
+		B309611C1BC44B060027A2DE /* RSFigureRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFigureRect.m; sourceTree = "<group>"; };
+		B32C134E1BC3F4640033B230 /* RSTiltedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTiltedView.h; sourceTree = "<group>"; };
+		B32C134F1BC3F4640033B230 /* RSTiltedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTiltedView.m; sourceTree = "<group>"; };
 		B3D23ABB1BBA8A2400166CCF /* 24UIDrawingsHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 24UIDrawingsHW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D23ABE1BBA8A2400166CCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B3D23AC01BBA8A2400166CCF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +60,8 @@
 		B3D23AE51BBA8A2400166CCF /* 24UIDrawingsHWTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "24UIDrawingsHWTests-Info.plist"; sourceTree = "<group>"; };
 		B3D23AE71BBA8A2400166CCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B3D23AE91BBA8A2400166CCF /* _4UIDrawingsHWTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _4UIDrawingsHWTests.m; sourceTree = "<group>"; };
+		B3D23AF31BBA8D4B00166CCF /* RSDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSDrawingView.h; sourceTree = "<group>"; };
+		B3D23AF41BBA8D4B00166CCF /* RSDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSDrawingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B309611A1BC441C60027A2DE /* Figures */ = {
+			isa = PBXGroup;
+			children = (
+				B309611B1BC44B060027A2DE /* RSFigureRect.h */,
+				B309611C1BC44B060027A2DE /* RSFigureRect.m */,
+			);
+			name = Figures;
+			sourceTree = "<group>";
+		};
 		B3D23AB21BBA8A2400166CCF = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +135,11 @@
 				B3D23AD01BBA8A2400166CCF /* Main.storyboard */,
 				B3D23AD31BBA8A2400166CCF /* RSViewController.h */,
 				B3D23AD41BBA8A2400166CCF /* RSViewController.m */,
+				B32C134E1BC3F4640033B230 /* RSTiltedView.h */,
+				B32C134F1BC3F4640033B230 /* RSTiltedView.m */,
+				B309611A1BC441C60027A2DE /* Figures */,
+				B3D23AF31BBA8D4B00166CCF /* RSDrawingView.h */,
+				B3D23AF41BBA8D4B00166CCF /* RSDrawingView.m */,
 				B3D23AD61BBA8A2400166CCF /* Images.xcassets */,
 				B3D23AC51BBA8A2400166CCF /* Supporting Files */,
 			);
@@ -250,9 +273,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B309611D1BC44B060027A2DE /* RSFigureRect.m in Sources */,
 				B3D23ACB1BBA8A2400166CCF /* main.m in Sources */,
 				B3D23ACF1BBA8A2400166CCF /* RSAppDelegate.m in Sources */,
+				B3D23AF51BBA8D4B00166CCF /* RSDrawingView.m in Sources */,
 				B3D23AD51BBA8A2400166CCF /* RSViewController.m in Sources */,
+				B32C13501BC3F4640033B230 /* RSTiltedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +485,7 @@
 				B3D23AEF1BBA8A2400166CCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3D23AF01BBA8A2400166CCF /* Build configuration list for PBXNativeTarget "24UIDrawingsHWTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +494,7 @@
 				B3D23AF21BBA8A2400166CCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
